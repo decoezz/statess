@@ -3,7 +3,6 @@ const client = new Discord.Client();
 var prefix = "c";
 var adminprefix = 'c'
 
-const developers = ["472413769700474901","id"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
@@ -38,4 +37,4 @@ if (message.content.startsWith(adminprefix + 'setava')) {
 });
 
 
-client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
+client.login(process.env.TOKEN);// لا تغير فيها شيء
